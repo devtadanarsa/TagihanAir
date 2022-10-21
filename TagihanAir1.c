@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define JATUH_TEMPO 25
 
 void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char klpPelanggan[], char golongan[], int tglBayar){
 	system("clear");
@@ -555,7 +554,7 @@ void formulirE11(){
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -587,8 +586,8 @@ void formulirE12(){
 	float pemakaianBulanIni, pemakaianBulanLalu;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char klpPelanggan[] = "E1 - 2";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -620,8 +619,8 @@ void formulirE13(){
 	float pemakaianBulanIni, pemakaianBulanLalu;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char klpPelanggan[] = "E1 - 3";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -653,8 +652,8 @@ void formulirE14(){
 	float pemakaianBulanIni, pemakaianBulanLalu;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char klpPelanggan[] = "E1 - 4";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -686,8 +685,8 @@ void formulirE21(){
 	float pemakaianBulanIni, pemakaianBulanLalu;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char klpPelanggan[] = "E2 - 1";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -719,8 +718,8 @@ void formulirE22(){
 	float pemakaianBulanIni, pemakaianBulanLalu;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char klpPelanggan[] = "E2 - 2";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -752,8 +751,8 @@ void formulirE23(){
 	float pemakaianBulanIni, pemakaianBulanLalu;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "E1 - 1";
-	char golongan[] = "Rumah Tangga";
+	char klpPelanggan[] = "E2 - 3";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -786,7 +785,7 @@ void formulirE24(){
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E2 - 4";
-	char golongan[] = "Rumah Tangga";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -819,7 +818,7 @@ void formulirE31(){
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 1";
-	char golongan[] = "Rumah Tangga";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -852,7 +851,7 @@ void formulirE32(){
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 2";
-	char golongan[] = "Rumah Tangga";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -885,7 +884,7 @@ void formulirE33(){
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 3";
-	char golongan[] = "Rumah Tangga";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
@@ -918,7 +917,7 @@ void formulirE34(){
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 4";
-	char golongan[] = "Rumah Tangga";
+	char golongan[] = "Usaha";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
 	printf("|| ================================================== ||\n");
