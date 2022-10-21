@@ -16,12 +16,15 @@ void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char kl
 	printf("|| Denda : Rp 0                                       ||\n");
 	printf("|| ================================================== ||\n");
 	printf("|| Total Bayar : Rp %d \n", pembayaran);
+	printf("|| ================================================== ||\n");
 }
 
 void formulirD11(){
 	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
-	char klpPelanggan[] = "D1 - 1";
+	char klpPelanggan[] = "D1 - 2";
 	char golongan[] = "Rumah Tangga";
 	printf("|| ================================================== ||\n");
 	printf("||                        FORMULIR                    ||\n");
@@ -711,6 +714,237 @@ void formulirE21(){
 	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
 }
 
+void formulirE22(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E1 - 1";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 10700;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11350;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12550;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
+void formulirE23(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E1 - 1";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11000;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11650;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 13150;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
+void formulirE24(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E2 - 4";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11300;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11950;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 13950;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
+void formulirE31(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E3 - 1";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11600;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12250;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 14750;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
+void formulirE32(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E3 - 2";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11900;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12550;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 15050;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
+void formulirE33(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E3 - 3";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12200;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12850;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 15850;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
+void formulirE34(){
+	system("clear");
+	float pemakaianBulanIni, pemakaianBulanLalu;
+	int pembayaran, tglBayar;
+	char namaLengkap[100], alamat[100];
+	char klpPelanggan[] = "E3 - 4";
+	char golongan[] = "Rumah Tangga";
+	printf("|| ================================================== ||\n");
+	printf("||                        FORMULIR                    ||\n");
+	printf("|| ================================================== ||\n");
+	getchar();
+	printf("|| Nama Lengkap : ");
+	scanf("%[^\n]", namaLengkap);
+	getchar();
+	printf("|| Alamat : ");
+	scanf("%[^\n]", alamat);
+	getchar();
+	printf("|| Pemakaian bulan ini (m3) : ");
+	scanf("%f", &pemakaianBulanIni);
+	printf("|| Pemakaian bulan lalu (m3) : ");
+	scanf("%f", &pemakaianBulanLalu);
+	printf("|| Tanggal Bayar : ");
+	scanf("%d", &tglBayar);
+	if(pemakaianBulanIni - pemakaianBulanLalu < 10){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12500;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 20){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 13150;
+	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
+		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 16650;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+}
+
 void dayaListrikA(){
 	system("clear");
 	int pilihan;
@@ -761,7 +995,6 @@ void dayaListrikB(){
 	printf("|| ================================================== ||\n");
 	switch(pilihan){
 		case 1 :
-
 			formulirD21();
 			break;
 		case 2 :
@@ -844,7 +1077,7 @@ void dayaListrikD(){
 	}
 }
 
-void dayaListrikE(){
+void dayaListrikE1(){
 	system("clear");
 	int pilihan;
 	printf("|| ================================================== ||\n");
@@ -873,7 +1106,73 @@ void dayaListrikE(){
 			formulirE14();
 			break;
 		default :
-			dayaListrikD();	
+			dayaListrikE1();	
+	}
+}
+
+void dayaListrikE2(){
+	system("clear");
+	int pilihan;
+	printf("|| ================================================== ||\n");
+	printf("||                      DAYA LISTRIK                  ||\n");
+	printf("|| ================================================== ||\n");
+	printf("|| (1) 450 VA                                         ||\n");
+	printf("|| (2) 900 VA                                         ||\n");
+	printf("|| (3) 1300 VA                                        ||\n");
+	printf("|| (4) >1300 VA                                       ||\n");
+	printf("||                                                    ||\n");
+	printf("|| Pilih daya listrik yang anda gunakan, masukkan     ||\n");
+	printf("|| angka di dalam () : ");
+	scanf("%d", &pilihan);
+	printf("|| ================================================== ||\n");
+	switch(pilihan){
+		case 1 :
+			formulirE21();
+			break;
+		case 2 :
+			formulirE22();
+			break;
+		case 3 :
+			formulirE23();
+			break;
+		case 4 :
+			formulirE24();
+			break;
+		default :
+			dayaListrikE2();	
+	}
+}
+
+void dayaListrikE3(){
+	system("clear");
+	int pilihan;
+	printf("|| ================================================== ||\n");
+	printf("||                      DAYA LISTRIK                  ||\n");
+	printf("|| ================================================== ||\n");
+	printf("|| (1) 450 VA                                         ||\n");
+	printf("|| (2) 900 VA                                         ||\n");
+	printf("|| (3) 1300 VA                                        ||\n");
+	printf("|| (4) >1300 VA                                       ||\n");
+	printf("||                                                    ||\n");
+	printf("|| Pilih daya listrik yang anda gunakan, masukkan     ||\n");
+	printf("|| angka di dalam () : ");
+	scanf("%d", &pilihan);
+	printf("|| ================================================== ||\n");
+	switch(pilihan){
+		case 1 :
+			formulirE31();
+			break;
+		case 2 :
+			formulirE32();
+			break;
+		case 3 :
+			formulirE33();
+			break;
+		case 4 :
+			formulirE34();
+			break;
+		default :
+			dayaListrikE3();	
 	}
 }
 
@@ -924,10 +1223,13 @@ void golUsaha(){
 	scanf("%d", &pilihan);
 	switch(pilihan){
 		case 1 :
-			dayaListrikE();
+			dayaListrikE1();
 			break;
 		case 2 :
-			golUsaha();	
+			dayaListrikE2();	
+			break;
+		case 3 :
+			dayaListrikE3();
 			break;
 		default :
 			golUsaha();	
