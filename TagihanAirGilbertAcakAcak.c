@@ -1353,17 +1353,6 @@ void golonganRumah(){
 	}
 }
 
-int validInt(int *var){
-	char buff[1024];
-	char check;
-	if (fgets(buff, sizeof(buff), stdin) !=NULL) {
-		if (sscanf(buff, "%d %c", var, &check) ==1){
-			return 1;
-		}
-	}
-	return 0;
-}
-
 int main(){
     fflush(stdin);
     system("cls");
