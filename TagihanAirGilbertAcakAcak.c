@@ -2,12 +2,17 @@
 #include <stdlib.h>
 
 void header(){
-	printf ("+-----------------------------------------------------+\n");
-	printf ("|                    PT. ANJAYANI                     |\n");
-	printf ("|                                                     |\n");
-	printf ("|              Devta Danarsa 2205551060               |\n");
-	printf ("|            Gilbert Stephen M 2205551057             |\n");
-	printf ("+-----------------------------------------------------+\n");
+	char input;
+	printf("|| ================================================== ||\n");
+	printf("||                    PT. ANJAYANI                    ||\n");
+	printf("||                                                    ||\n");
+	printf("||              Devta Danarsa 2205551060              ||\n");
+	printf("||            Gilbert Stephen M 2205551057            ||\n");
+	printf("|| ================================================== ||\n");
+	printf("||          Tekan apa saja untuk melanjutkan!         ||\n");
+	printf("|| ================================================== ||\n");
+	scanf("%c", &input);
+	system("cls");
 }
 
 void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char klpPelanggan[], char golongan[], int tglBayar, int denda){
