@@ -2,12 +2,17 @@
 #include <stdlib.h>
 
 void header(){
-	printf ("+-----------------------------------------------------+\n");
-	printf ("|                    PT. ANJAYANI                     |\n");
-	printf ("|                                                     |\n");
-	printf ("|              Devta Danarsa 2205551060               |\n");
-	printf ("|            Gilbert Stephen M 2205551057             |\n");
-	printf ("+-----------------------------------------------------+\n");
+	char enter;
+	printf("|| ================================================== ||\n");
+	printf("||                     PT. ANJAYANI                   ||\n");
+	printf("||                                                    ||\n");
+	printf("||              Devta Danarsa 2205551060              ||\n");
+	printf("||            Gilbert Stephen M 2205551057            ||\n");
+	printf("|| ================================================== ||\n");
+	printf("||             Tekan Enter Untuk Melanjutkan!         ||\n");
+	printf("|| ================================================== ||\n");
+	scanf("%c", &enter);
+	system("cls");
 }
 
 int validInt(int *var){
@@ -32,7 +37,7 @@ void reVldInt(int *var, char *prompt){
 	}
 }
 
-void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char klpPelanggan[], char golongan[], int tglBayar){
+void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char klpPelanggan[], char golongan[], int tglBayar, int denda){
 	system("cls");
 	printf("|| ================================================== ||\n");
 	printf("||                   DETAIL PEMBAYARAN                ||\n");
@@ -43,7 +48,7 @@ void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char kl
 	printf("|| Golongan : %s                                      \n", golongan);                        
 	printf("|| Tanggal Bayar : %d - 10 2022                       \n", tglBayar);
 	printf("|| Jatuh Tempo : 25 - 10 - 2022                       \n");
-	printf("|| Denda : Rp 0                                       \n");
+	printf("|| Denda : Rp %d                                       \n", denda);
 	printf("|| ================================================== ||\n");
 	printf("|| Total Bayar : Rp %d \n", pembayaran);
 	printf("|| ================================================== ||\n");
@@ -52,7 +57,7 @@ void detailPembayaran(char namaLengkap[], char alamat[], int pembayaran, char kl
 void formulirD11(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D1 - 2";
 	char golongan[] = "Rumah Tangga";
@@ -82,13 +87,18 @@ void formulirD11(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 5820;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD12(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D1 - 2";
 	char golongan[] = "Rumah Tangga";
@@ -118,13 +128,18 @@ void formulirD12(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 5940;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD13(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D1 - 3";
 	char golongan[] = "Rumah Tangga";
@@ -154,13 +169,18 @@ void formulirD13(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 9600;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD14(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D1 - 4";
 	char golongan[] = "Rumah Tangga";
@@ -190,14 +210,19 @@ void formulirD14(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 9650;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 
 }
 
 void formulirD21(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D2 - 1";
 	char golongan[] = "Rumah Tangga";
@@ -227,13 +252,18 @@ void formulirD21(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 6000;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD22(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D2 - 2";
 	char golongan[] = "Rumah Tangga";
@@ -263,12 +293,17 @@ void formulirD22(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 6060;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD23(){
 	system("cls");
-	float pemakaianBulanIni, pemakaianBulanLalu;
+	float pemakaianBulanIni, pemakaianBulanLalu, denda;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D2 - 3";
@@ -299,13 +334,18 @@ void formulirD23(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu > 20){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 9800;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD24(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D2 - 4";
 	char golongan[] = "Rumah Tangga";
@@ -335,13 +375,18 @@ void formulirD24(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 9950;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD31(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D3 - 1";
 	char golongan[] = "Rumah Tangga";
@@ -371,13 +416,18 @@ void formulirD31(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 6120;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD32(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D3 - 2";
 	char golongan[] = "Rumah Tangga";
@@ -407,13 +457,18 @@ void formulirD32(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 6120;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD33(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D3 - 3";
 	char golongan[] = "Rumah Tangga";
@@ -443,13 +498,18 @@ void formulirD33(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 10100;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD34(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D3 - 4";
 	char golongan[] = "Rumah Tangga";
@@ -479,13 +539,18 @@ void formulirD34(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 10250;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD41(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D4 - 1";
 	char golongan[] = "Rumah Tangga";
@@ -515,13 +580,18 @@ void formulirD41(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 6240;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD42(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D4 - 2";
 	char golongan[] = "Rumah Tangga";
@@ -551,13 +621,18 @@ void formulirD42(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 6300;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD43(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D4 - 3";
 	char golongan[] = "Rumah Tangga";
@@ -587,13 +662,18 @@ void formulirD43(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 10400;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirD44(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "D4 - 4";
 	char golongan[] = "Rumah Tangga";
@@ -623,13 +703,18 @@ void formulirD44(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 10550;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 5000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE11(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E1 - 1";
 	char golongan[] = "Usaha";
@@ -659,13 +744,18 @@ void formulirE11(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 10950;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE12(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E1 - 2";
 	char golongan[] = "Usaha";
@@ -695,13 +785,18 @@ void formulirE12(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11250;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE13(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E1 - 3";
 	char golongan[] = "Usaha";
@@ -731,13 +826,18 @@ void formulirE13(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11550;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE14(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E1 - 4";
 	char golongan[] = "Usaha";
@@ -767,13 +867,18 @@ void formulirE14(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 11850;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE21(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E2 - 1";
 	char golongan[] = "Usaha";
@@ -803,13 +908,18 @@ void formulirE21(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12150;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE22(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E2 - 2";
 	char golongan[] = "Usaha";
@@ -839,13 +949,18 @@ void formulirE22(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 12550;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE23(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E2 - 3";
 	char golongan[] = "Usaha";
@@ -875,13 +990,18 @@ void formulirE23(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 13150;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE24(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E2 - 4";
 	char golongan[] = "Usaha";
@@ -911,13 +1031,18 @@ void formulirE24(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 13950;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 7000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE31(){
 	system("clear");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 1";
 	char golongan[] = "Usaha";
@@ -947,12 +1072,17 @@ void formulirE31(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 14750;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 10000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE32(){
 	system("cls");
-	float pemakaianBulanIni, pemakaianBulanLalu;
+	float pemakaianBulanIni, pemakaianBulanLalu, denda;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 2";
@@ -983,13 +1113,18 @@ void formulirE32(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 15050;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 10000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE33(){
 	system("cls");
 	float pemakaianBulanIni, pemakaianBulanLalu;
-	int pembayaran, tglBayar;
+	int pembayaran, tglBayar, denda;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 3";
 	char golongan[] = "Usaha";
@@ -1020,12 +1155,17 @@ void formulirE33(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 15850;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 10000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void formulirE34(){
 	system("cls");
-	float pemakaianBulanIni, pemakaianBulanLalu;
+	float pemakaianBulanIni, pemakaianBulanLalu, denda;
 	int pembayaran, tglBayar;
 	char namaLengkap[100], alamat[100];
 	char klpPelanggan[] = "E3 - 4";
@@ -1056,7 +1196,12 @@ void formulirE34(){
 	}else if(pemakaianBulanIni - pemakaianBulanLalu < 30){
 		pembayaran = (pemakaianBulanIni - pemakaianBulanLalu) * 16650;
 	}
-	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar);
+	if(tglBayar > 25){
+		denda = 10000;
+	}else{
+		denda = 0;
+	}
+	detailPembayaran(namaLengkap, alamat, pembayaran, klpPelanggan, golongan, tglBayar, denda);
 }
 
 void dayaListrikA(){
